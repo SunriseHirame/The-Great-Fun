@@ -9,11 +9,13 @@ namespace Hirame {
 
         public float Delay = 1;
         public bool Repeat;
+        public bool StartOnEnable;
 
         public UnityEvent OnTimerFinished;
 
         public void OnEnable () {
-            Invoke ("RaiseEvent", Delay);
+            if (StartOnEnable)
+                Invoke ("RaiseEvent", Delay);
         }
 
         void RaiseEvent () {

@@ -9,10 +9,14 @@ namespace Hirame {
 
         public GameObject Prefab;
 
-        public GameObject InstanciateAsChild (Transform transform) {
+        public int MaxChildCount = 1;
+
+        public void InstanciateAsChild (Transform transform) {
+            if (transform.childCount >= MaxChildCount)
+                return;
+
             var p = Instantiate (Prefab, transform.position, transform.rotation, transform);
             p.SetActive (true);
-            return p;
         }
     }
 

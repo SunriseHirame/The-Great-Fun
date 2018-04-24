@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOnContact : MonoBehaviour {
+namespace Hirame {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public class DestroyOnContact : MonoBehaviour {
+
+        private void OnCollisionEnter () {
+            Destroy (gameObject);
+        }
+
+        private void OnTriggerEnter () {
+            OnCollisionEnter ();
+        }
+    }
+
 }

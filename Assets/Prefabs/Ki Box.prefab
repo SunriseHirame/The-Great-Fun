@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4954406635732086}
   - component: {fileID: 135579328126304642}
-  - component: {fileID: 114073459883684010}
+  - component: {fileID: 114174597394378850}
   m_Layer: 0
   m_Name: Ki Box
   m_TagString: Untagged
@@ -850,7 +850,7 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
---- !u!114 &114073459883684010
+--- !u!114 &114174597394378850
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143775923279900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8441f6a51170f5e448d334b8e979d1ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d15fc3fa20ea444aabce40a6bffd758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114176884040867898
