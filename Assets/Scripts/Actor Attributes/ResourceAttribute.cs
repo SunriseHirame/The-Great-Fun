@@ -11,9 +11,11 @@ namespace Hirame {
         public float Starting;
         public float Max;
 
-        float current;
+        public float Current { get; private set; }
 
-        public float Current => current;
+        private void Awake () {
+            Current = Starting;
+        }
     }
 
 }

@@ -23,7 +23,7 @@ namespace Hirame {
                 ShotOrigin,
                 transform.rotation * Quaternion.Euler (Random.insideUnitSphere * Deviation));
 
-            bullet.velocity = transform.forward * BulletSpeed;
+            bullet.velocity = bullet.transform.forward * BulletSpeed;
             bullet.useGravity = true;
             bullet.isKinematic = false;
 
@@ -32,6 +32,7 @@ namespace Hirame {
                 transform.position + transform.right * 0.2f,
                 transform.rotation
                 );
+
             casing.velocity = transform.right * 5f + Vector3.up;
             casing.useGravity = true;
             casing.isKinematic = false;

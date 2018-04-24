@@ -8,6 +8,15 @@ namespace Hirame {
 
         public GameEvent PlayerDeathEvent;
 
+        public ResourceAttribute Health;
+
+        private void Update () {
+            if (Health.Current <= 0f) {
+                PlayerDeathEvent.Raise ();
+                gameObject.SetActive (false);
+            }
+        }
+
     }
 
 }
