@@ -8,15 +8,21 @@ namespace Hirame {
     public class Instanciatable : ScriptableObject {
 
         public GameObject Prefab;
-
         public int MaxChildCount = 1;
+
+        public GameObject LastInstanciated { get; private set; }
+
+        public void IntanciateAt (Vector3 position) {
+            LastInstanciated = Instantiate (Prefab, position, Quaternion.identity);
+            LastInstanciated.SetActive (true);
+        }
 
         public void InstanciateAsChild (Transform transform) {
             if (transform.childCount >= MaxChildCount)
                 return;
 
-            var p = Instantiate (Prefab, transform.position, transform.rotation, transform);
-            p.SetActive (true);
+            LastInstanciated = Instantiate (Prefab, transform.position, transform.rotation, transform);
+            LastInstanciated.SetActive (true);
         }
     }
 

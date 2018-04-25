@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: Ki Ball
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1143775923279900, guid: 3489c37b22f30344c8317511e9eb3219, type: 2}
+  MaxChildCount: 1
