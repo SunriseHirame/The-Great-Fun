@@ -10,9 +10,11 @@ namespace Hirame {
         public float LookSpeed;
 
         new Transform transform;
+        new Rigidbody rigidbody;
 
         private void Awake () {
             transform = GetComponent<Transform> ();
+            rigidbody = GetComponent<Rigidbody> ();
         }
 
         private void Update () {
@@ -31,11 +33,8 @@ namespace Hirame {
             // Improve the target lookat rotation to be less jerky.
             // Can be done with lerping or whatever.
 
-            transform.SetPositionAndRotation (
-                transform.position + transform.TransformDirection (Speed * dt * input),
-                transform.rotation * Quaternion.Euler (0, Input.GetAxis ("Mouse X") * LookSpeed * dt, 0)
-                );
-                
+            transform.rotation *= Quaternion.Euler (0, Input.GetAxis ("Mouse X") * LookSpeed * dt, 0);
+            transform.position += transform.TransformDirection (Speed * dt * input);
         }
 
     }

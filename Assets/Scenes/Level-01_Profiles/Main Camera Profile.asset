@@ -58,6 +58,7 @@ MonoBehaviour:
   mask:
     overrideState: 0
     value: {fileID: 0}
+    defaultState: 1
   opacity:
     overrideState: 0
     value: 1
@@ -81,7 +82,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.11
+    value: 1.22
   color:
     overrideState: 1
     value: {r: 0.1509434, g: 0.1473834, b: 0.1473834, a: 1}
@@ -99,7 +100,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 5.7
+    value: 2.2
   directLightingStrength:
     overrideState: 0
     value: 0
@@ -126,13 +127,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.18
+    value: 4.73
   threshold:
     overrideState: 1
-    value: 1.22
+    value: 1.51
   softKnee:
-    overrideState: 0
-    value: 0.5
+    overrideState: 1
+    value: 0.506
   diffusion:
     overrideState: 0
     value: 7
@@ -148,6 +149,7 @@ MonoBehaviour:
   dirtTexture:
     overrideState: 0
     value: {fileID: 0}
+    defaultState: 1
   dirtIntensity:
     overrideState: 0
     value: 0
@@ -235,6 +237,7 @@ MonoBehaviour:
   externalLut:
     overrideState: 0
     value: {fileID: 0}
+    defaultState: 1
   tonemapper:
     overrideState: 1
     value: 2
@@ -256,12 +259,13 @@ MonoBehaviour:
   toneCurveGamma:
     overrideState: 0
     value: 1
-  logLut:
-    overrideState: 0
-    value: {fileID: 0}
   ldrLut:
     overrideState: 0
     value: {fileID: 0}
+    defaultState: 4
+  ldrLutContribution:
+    overrideState: 0
+    value: 1
   temperature:
     overrideState: 0
     value: 0
@@ -284,8 +288,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   contrast:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 4
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -507,16 +511,16 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 47.055794, y: 94.5794}
+    value: {x: 43.905582, y: 91.429184}
   minLuminance:
     overrideState: 1
     value: 0
   maxLuminance:
     overrideState: 1
-    value: 0
+    value: 0.7
   keyValue:
     overrideState: 1
-    value: 0.83
+    value: 1
   eyeAdaptation:
     overrideState: 0
     value: 0

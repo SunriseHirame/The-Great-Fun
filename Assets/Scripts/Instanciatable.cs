@@ -24,6 +24,10 @@ namespace Hirame {
             LastInstanciated = Instantiate (Prefab, transform.position, transform.rotation, transform);
             LastInstanciated.SetActive (true);
         }
+
+        public void InstanciateAlingedTo (Transform transform) {
+
+        }
     }
 
 }

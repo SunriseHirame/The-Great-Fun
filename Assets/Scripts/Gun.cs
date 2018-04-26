@@ -44,8 +44,8 @@ namespace Hirame {
         }
 
         private void OnDrawGizmosSelected () {
-            var dir = transform.TransformVector (BulletSpawnOffset);
-            var origin = transform.position + dir;
+            var dir = transform.forward;
+            var origin = ShotOrigin;
 
             Gizmos.color = Color.yellow;
             Gizmos.DrawRay (origin, dir);
