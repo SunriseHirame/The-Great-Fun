@@ -17,7 +17,7 @@ namespace Hirame {
         Coroutine targetUpdater;
 
         private void Start () {
-            SpawnedEvent.Raise ();
+            SpawnedEvent?.Raise ();
         }
 
         public void SetNavigationTarget (Transform transform) {
