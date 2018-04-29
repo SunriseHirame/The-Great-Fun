@@ -7,12 +7,18 @@ namespace Hirame {
 
     public class EnemyAI : MonoBehaviour {
 
+        public GameEvent SpawnedEvent;
+
         public NavMeshAgent Navigator;
 
         public Transform Target;
         Vector3 currentTargetPosition;
 
         Coroutine targetUpdater;
+
+        private void Start () {
+            SpawnedEvent.Raise ();
+        }
 
         public void SetNavigationTarget (Transform transform) {
             Target = transform;

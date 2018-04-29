@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4954406635732086}
   - component: {fileID: 135579328126304642}
   - component: {fileID: 114174597394378850}
+  - component: {fileID: 114881272813571710}
   m_Layer: 0
   m_Name: Ki Box
   m_TagString: Untagged
@@ -966,6 +967,19 @@ MonoBehaviour:
   Speed: 70
   Center: {fileID: 4485020574549958}
   transform: {fileID: 4608736098311126}
+--- !u!114 &114881272813571710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143775923279900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25368a48813e61d45b448ee87e9e7799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableTriggers: 1
+  Damage: 5
 --- !u!114 &114894810047526558
 MonoBehaviour:
   m_ObjectHideFlags: 1

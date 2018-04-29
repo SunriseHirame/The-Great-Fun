@@ -2,15 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageOnContact : MonoBehaviour {
+namespace Hirame {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public class DamageOnContact : MonoBehaviour {
+
+        public float Damage;
+
+        private void OnCollisionEnter (Collision collision) {
+           // TODO:
+           // FUCKING DO IT RIGHT
+            var health = collision.rigidbody?.GetComponent<Actor> ()?.Health;
+            if (health == null)
+                return;
+            health.Current -= Damage;
+        }
+
+        private void OnTriggerEnter (Collider other) {
+            var health = other.attachedRigidbody?.GetComponent<Actor> ()?.Health;
+            if (health == null)
+                return;
+            health.Current -= Damage;
+        }
+    }
+
 }
