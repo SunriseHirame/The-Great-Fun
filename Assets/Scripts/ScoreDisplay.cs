@@ -9,23 +9,26 @@ namespace Hirame {
     public class ScoreDisplay : MonoBehaviour {
 
         public Text text;
+        public GlobalInt EnemiesLeft;
+        int previousEnemyCount;
 
+        public GameEvent LelvelCleared;
 
-        public int EnemiesLeft;
+        private void Update () {
+            var enemies = EnemiesLeft.GetValue ();
+            if (previousEnemyCount != enemies) {
+                previousEnemyCount = enemies;
+                UpdateText ();
 
-        public void OnEnemySpawned () {
-            EnemiesLeft++;
-            UpdateText ();
-        }
-
-        public void OnEnemyDeath () {
-            EnemiesLeft--;
-            UpdateText ();
+                if (enemies == 0) {
+                    LelvelCleared?.Raise ();
+                    enabled = false;
+                }
+            }
         }
 
         void UpdateText () {
-            Debug.Log (EnemiesLeft);
-            text.text = EnemiesLeft.ToString ();
+            text.text = EnemiesLeft.GetValueAsString ();
         }
     }
 

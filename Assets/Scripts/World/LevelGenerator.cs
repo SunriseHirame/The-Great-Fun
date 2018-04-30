@@ -14,9 +14,13 @@ namespace Hirame {
         public Transform BasePiece;
         public Vector3 BasePieceSize = new Vector3 (10, 1, 10);
 
+        public UnityEngine.AI.NavMeshSurface NavMesh;
+
+        public GameEvent LevelGenerationStarted;
+        public GameEvent LevelGenerationDone;
+
         public Transform[] LevelPieces;
 
-        public GameEvent LevelGenerationDoneEvent;
 
         Quaternion[] rotations = new Quaternion[] {
             Quaternion.Euler (0, 0 ,0),
@@ -36,6 +40,9 @@ namespace Hirame {
         public void GenerateLevel () {
             if (IsLevelGenerated)
                 ClearLevel ();
+
+            LevelGenerationStarted?.Raise ();
+
             BasePiece.gameObject.SetActive (true);
 
             var numPieces = LevelPieces.Length;
@@ -61,7 +68,8 @@ namespace Hirame {
                 }
             }
             BasePiece.gameObject.SetActive (false);
-            LevelGenerationDoneEvent.Raise ();
+            NavMesh?.BuildNavMesh ();
+            LevelGenerationDone.Raise ();
         }
 
         public void ClearLevel () {
