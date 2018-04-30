@@ -7,6 +7,7 @@ namespace Hirame {
     [CreateAssetMenu (menuName = "Hirame/World/Spawn List")]
     public class SpawnList : ScriptableObject {
 
+        public int WeightTotal;
         public SpawnEntry[] Spawnables;
 
         public Transform GetRandomSpawnable () {

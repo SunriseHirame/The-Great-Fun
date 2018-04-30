@@ -21,7 +21,7 @@ namespace Hirame {
 
             while (checkQueue.Count > 0) {
                 var thisFrame = Mathf.Min (checkQueue.Count, MAX_PER_FRAME);
-                for (var i = thisFrame; i >= 0; i--) {
+                for (var i = thisFrame; i > 0; i--) {
                     var toCheck = checkQueue.Dequeue ();
 
                     if (toCheck == null)
