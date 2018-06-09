@@ -476,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07c285015bb56347b63489e82d09a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActorFaction: {fileID: 11400000, guid: 699831f87c8a2464fb9c63278491ccf5, type: 2}
   Health: {fileID: 114449869383995300}
   ActorDeath:
     m_PersistentCalls:

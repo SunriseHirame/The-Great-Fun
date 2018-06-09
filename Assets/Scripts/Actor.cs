@@ -7,6 +7,7 @@ namespace Hirame {
 
     public class Actor : MonoBehaviour {
 
+        public Faction ActorFaction;
         public ResourceAttribute Health;
 
         public UnityEvent ActorDeath;

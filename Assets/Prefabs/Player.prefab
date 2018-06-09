@@ -2030,6 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07c285015bb56347b63489e82d09a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActorFaction: {fileID: 11400000, guid: 80acd55d8c817d849b36f6c92b95c95b, type: 2}
   Health: {fileID: 114512172613638198}
   ActorDeath:
     m_PersistentCalls:
@@ -2106,6 +2107,7 @@ MonoBehaviour:
   AttributeType: {fileID: 11400000, guid: f1a7385b0bad4ce4896fe546776c4579, type: 2}
   Starting: 100
   Max: 100
+  Current: 0
 --- !u!114 &114696561441481086
 MonoBehaviour:
   m_ObjectHideFlags: 1
