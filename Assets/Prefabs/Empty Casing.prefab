@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4552978285659328}
   - component: {fileID: 54623107926047824}
+  - component: {fileID: 114073825486942306}
   m_Layer: 10
   m_Name: Empty Casing
   m_TagString: Untagged
@@ -129,6 +130,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114073825486942306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901082611586024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca6975272b3f9b41833f7b10be997a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceVertical: -20
 --- !u!136 &136723130449574466
 CapsuleCollider:
   m_ObjectHideFlags: 1

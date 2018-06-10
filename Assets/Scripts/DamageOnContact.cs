@@ -7,21 +7,31 @@ namespace Hirame {
     public class DamageOnContact : MonoBehaviour {
 
         public float Damage;
+        public Faction TargetFaction;
+        public bool DestroyIfValidTarget = true;
 
         private void OnCollisionEnter (Collision collision) {
-           // TODO:
-           // FUCKING DO IT RIGHT
-            var health = collision.rigidbody?.GetComponent<Actor> ()?.Health;
-            if (health == null)
-                return;
-            health.Current -= Damage;
+            DamageTarget (collision.rigidbody?.GetComponent<Actor> ());
         }
 
         private void OnTriggerEnter (Collider other) {
-            var health = other.attachedRigidbody?.GetComponent<Actor> ()?.Health;
+            DamageTarget (other.attachedRigidbody?.GetComponent<Actor> ());
+        }
+
+        void DamageTarget (Actor actor) {
+            if (actor == null)
+                return;
+
+            if (TargetFaction != null && !actor.ActorFaction.Equals (TargetFaction))
+                return;
+                
+            var health = actor.Health;
             if (health == null)
                 return;
             health.Current -= Damage;
+
+            if (DestroyIfValidTarget)
+                Destroy (gameObject);
         }
     }
 

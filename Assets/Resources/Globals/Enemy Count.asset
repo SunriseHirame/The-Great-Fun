@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad960121ca8cf574498c3e18a6c1575a, type: 3}
   m_Name: Enemy Count
   m_EditorClassIdentifier: 
-  ResetMode: 2
+  ResetMode: 3
   value: 0
